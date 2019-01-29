@@ -8,22 +8,18 @@ const sortData = (data, sortOrder) => {
   for (let element in data) {
     newArrayData.push(Object.assign({}, data[element]));
   } 
-  let sortDataFunction = newArrayData.sort((firstElement, secundElement) => {   
-    if (firstElement > secundElement) {
+  let sortArray = newArrayData.sort((firstElement, secundElement) => {   
+    if (firstElement.name > secundElement.name) {
       return 1; 
-    } else if (firstElement < secundElement) {
-      return -1;
     } else {
       return 0;
     }
   });
   if (sortOrder === 'asc') {
-    return sortDataFunction;
-  } else if (sortOrder === 'desc') {
-    return sortDataFunction.reverse();
+    return sortArray;
   } else {
-    return 0;
-  }
+    return sortArray.reverse();
+  } 
 };
 
 

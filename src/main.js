@@ -1,4 +1,7 @@
 const containerList = document.getElementById('container-list');
+const selectRoles = document.getElementById('select-roles');
+const selectOrder = document.getElementById('select-order');
+
 
 /*   const dataLol = LOL.data;
     
@@ -34,4 +37,18 @@ const listData = (data) => {
 };
 listData(dataLol);
     
+const functionToFilter = () => {
+  let condition = selectRoles.value;
+  let filterDataRoles = window.lol.filterData(dataLol, condition);
+  listData(filterDataRoles);
+};
+selectRoles.addEventListener('change', functionToFilter);
+
+const functionToSort = () => {
+  let sortOrden = selectOrder.value;
+  let sortArray = window.lol.sortData(dataLol, sortOrden);
+  listData(sortArray);
+};
+selectOrder.addEventListener('change', functionToSort);
+
 
