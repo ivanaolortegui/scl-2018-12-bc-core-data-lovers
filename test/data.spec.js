@@ -20,7 +20,13 @@ const input1 = [
   { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' },
   {'name': 'Zyra', 'tags': ['Mage', 'Support'], 'stats': {'attackdamage': 53.376, 'attackdamageperlevel': 3.2}, 'title': 'Rise of the Thorns'},
 ];
-
+const input5 = [
+  {'name': 'Aatrox', 'tags': ['Fighter', 'Tank'], 'stats': {'attackdamage': 60.376, 'attackdamageperlevel': 3.2}, 'title': 'the Darkin Blade'},
+  {'name': 'Zyra', 'tags': ['Mage', 'Support'], 'stats': {'attackdamage': 53.376, 'attackdamageperlevel': 3.2}, 'title': 'Rise of the Thorns'},
+  { 'name': 'Ahri', 'tags': ['Mage', 'Assassin'], 'stats': {'attackdamage': 53.04, 'attackdamageperlevel': 3}, 'title': 'the Nine-Tailed Fox' },
+  { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' },
+  
+];
 const output2 = [
   { 'name': 'Ahri', 'tags': ['Mage', 'Assassin'], 'stats': {'attackdamage': 53.04, 'attackdamageperlevel': 3}, 'title': 'the Nine-Tailed Fox' },
   { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' }
@@ -59,7 +65,7 @@ describe('window.lol.sortData', () => {
     expect(typeof window.lol.sortData).toBe('function');
   });
   it('debería retornar un nuevo array con los campeones de A-Z', () => {
-    expect(window.lol.sortData(input1, 'asc')).toEqual(output4);
+    expect(window.lol.sortData(input5, 'asc')).toEqual(output4);
   });
   it('debería retornar un nuevo array con los campeones de Z-A', () => {
     expect(window.lol.sortData(input1, 'desc')).toEqual(output3);

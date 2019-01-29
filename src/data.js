@@ -8,9 +8,11 @@ const sortData = (data, sortOrder) => {
   for (let element in data) {
     newArrayData.push(Object.assign({}, data[element]));
   } 
-  let sortArray = newArrayData.sort((firstElement, secundElement) => {   
-    if (firstElement.name > secundElement.name) {
+  let sortArray = newArrayData.sort((firstElement, secondElement) => {   
+    if (firstElement.name > secondElement.name) {
       return 1; 
+    } else if (firstElement.name < secondElement.name) {
+      return -1;
     } else {
       return 0;
     }

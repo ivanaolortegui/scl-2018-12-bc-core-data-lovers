@@ -25,7 +25,7 @@ const listData = (data) => {
   let templateListOfCards = '';
   data.forEach((champions) => { 
     const card = `
-        <img class="post-image" src="${champions.img}"/>
+        <img class="post-image" src="${champions.splash}"/>
         <p> ${champions.name} </h1>
         <p> ${champions.tags}</p> 
         <p> ${champions.stats.attackdamage}</p>
