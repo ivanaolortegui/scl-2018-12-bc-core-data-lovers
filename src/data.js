@@ -24,8 +24,14 @@ const sortData = (data, sortOrder) => {
   } 
 };
 
+const computeStats = (data) => {
+  const computesStatsAttack = data.map(element => element.stats.attackdamage);
+  const maxStatsAttack = Math.max(...computesStatsAttack);
+  return maxStatsAttack;
+};
 
 window.lol = {
   filterData,
   sortData,
+  computeStats,
 };

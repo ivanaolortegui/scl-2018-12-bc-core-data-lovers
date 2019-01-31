@@ -1,6 +1,7 @@
 const containerList = document.getElementById('container-list');
 const selectRoles = document.getElementById('select-roles');
 const selectOrder = document.getElementById('select-order');
+const maxStats = document.getElementById('max-stats');
 
 
 /*   const dataLol = LOL.data;
@@ -50,5 +51,13 @@ const functionToSort = () => {
   listData(sortArray);
 };
 selectOrder.addEventListener('change', functionToSort);
+
+
+const functionToStats = () => {
+  let maxStatsAttack = window.lol.computeStats(functionToFilter);
+  listData(maxStatsAttack);
+};
+
+maxStats.addEventListener(functionToFilter, functionToStats);
 
 
