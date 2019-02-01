@@ -1,36 +1,21 @@
 const containerList = document.getElementById('container-list');
 const selectRoles = document.getElementById('select-roles');
 const selectOrder = document.getElementById('select-order');
-const maxStats = document.getElementById('max-stats');
 
-
-/*   const dataLol = LOL.data;
-    
-const listData = () => {
-for(let data in dataLol) {
-    const card = `
-    <img class="post-image" src="${champions.img}" />
-    <p> ${champions.name} </h1>
-    <p> ${champions.tags} </p> 
-    <p> ${champions.stats.attackdamage} </p>
-    <p> ${champions.stats.hpregenperlevel} </p>
-    `
-    containerList.innerHTML += card;
-}
-}
-listData();
-
- */
 const dataLol = Object.values(LOL.data);
 const listData = (data) => {
   let templateListOfCards = '';
   data.forEach((champions) => { 
     const card = `
+        <article class="blog-card">
         <img class="post-image" src="${champions.splash}"/>
-        <p> ${champions.name} </h1>
+        <p class="tittle-name" > ${champions.name} </h1>
+        <div class="article-details">
         <p> ${champions.tags}</p> 
         <p> ${champions.stats.attackdamage}</p>
         <p> ${champions.stats.hpregenperlevel}</p>
+        </div>
+        </article>
         `;
     templateListOfCards += card;
   });
@@ -51,13 +36,3 @@ const functionToSort = () => {
   listData(sortArray);
 };
 selectOrder.addEventListener('change', functionToSort);
-
-
-const functionToStats = () => {
-  let maxStatsAttack = window.lol.computeStats(functionToFilter);
-  listData(maxStatsAttack);
-};
-
-maxStats.addEventListener(functionToFilter, functionToStats);
-
-

@@ -54,6 +54,15 @@ const inputComputeStats = [
 ];
 const outputComputeStats = 60.376;
 
+const inputSearchData = [
+  {'name': 'Aatrox', 'tags': ['Fighter', 'Tank'], 'stats': {'attackdamage': 60.376, 'attackdamageperlevel': 3.2}, 'title': 'the Darkin Blade'},
+  { 'name': 'Ahri', 'tags': ['Mage', 'Assassin'], 'stats': {'attackdamage': 53.04, 'attackdamageperlevel': 3}, 'title': 'the Nine-Tailed Fox' },
+  { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' }
+];
+
+const outputSearchData = 
+  { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' };
+
 describe('lol', () => {
   it('is an object', () => {
     expect(typeof lol).toBe('object');
@@ -80,7 +89,7 @@ describe('window.lol.sortData', () => {
     expect(window.lol.sortData(inputSorDataDesc, 'desc')).toEqual(outputSortDataDesc);
   });
   it('debería retornar un nuevo array y no modificar el array original', () => {
-    expect(window.lol.sortData(inputSorDataAsc, 'asc')).toEqual(inputSorDataAsc);
+    expect(window.lol.sortData(inputFilterData, 'asc')).toEqual(inputFilterData);
   });
   it('debería retornar un nuevo array con los campeones que sean iguales de A-Z', () => {
     expect(window.lol.sortData(inputSortDataEqual, 'asc')).toEqual(inputSortDataEqual);
@@ -93,5 +102,15 @@ describe('widow.lol.computeStats', () => {
   });
   it('debería retornar un nuevo array con los ataques', () => {
     expect(window.lol.computeStats(inputComputeStats)).toEqual(outputComputeStats);
+  });
+});
+
+
+describe('widow.lol.computeStats', () => {
+  it('searchData is a function', () => {
+    expect(typeof window.lol.searchData).toBe('function');
+  });
+  it('debería retornar un nuevo array con el campeon buscado', () => {
+    expect(window.lol.searchData(inputSearchData, 'Akali')).toEqual(outputSearchData);
   });
 });

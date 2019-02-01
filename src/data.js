@@ -30,8 +30,14 @@ const computeStats = (data) => {
   return maxStatsAttack;
 };
 
+const searchData = (data, input) => {
+  const searchName = data.find(element => element.name === input);
+  return searchName;
+};
+
 window.lol = {
   filterData,
   sortData,
   computeStats,
+  searchData
 };
