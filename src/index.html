@@ -6,19 +6,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
     <nav class="top-nav" id="topNav">
-  <div class="box-menu">
       <figure> <a href="index.html">
           <img class="logo" src="img/logo-lol.png" href="index.html" alt="lol-logo"> </a>
       </figure>
-            <a class="nav-filter">CAMPEONES</a>
-            <a class="nav-filter">ROLES</a>
-            <a class="nav-filter">TOP 10</a>
-            <a class="nav-filter">CALCULAR ATAQUE POR NIVEL</a>        
-  </div>
+      <div class="nav-section" >
+          <a class="nav-filter">CAMPEONES</a>
+          <a class="nav-filter">ROLES</a>  
+      </div>
     </nav>
-
     <section class="box">
       <select name="Ordenar" id="select-order">
        <option>Ordenar</option>
@@ -36,14 +32,17 @@
          <option value="Support">Support</option>
          <option value="Marksman">Marksman</option>
         </select>
-        <p class= "article-details" id="max-stats"> Maximo en ataque</p>
-      </section>
-      <input type="text" id="text-find"  placeholder=" Buscar" required/> 
-      
-      <button id="find" value="find">Buscar</button>
-    <div id="container-list">
-    </div>
-  
+    </section>
+    <article id="max-stats">
+    </article>
+    <section>
+      <input type="text" id="text-search" placeholder=" Buscar" required/> 
+      <button id="btn-search">Buscar</button>
+    </section>
+    <main>
+     <div id="container-list">
+     </div>
+   </main>
      <script src="./data/lol/lol.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script>

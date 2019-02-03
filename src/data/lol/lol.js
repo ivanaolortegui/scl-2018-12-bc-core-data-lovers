@@ -3079,8 +3079,7 @@ const LOL = {
       img:
         "https://www.masterypoints.com/assets/img/lol/champion_icons/LeeSin.png",
       splash:
-        // "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/_0.jpg",
-        "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin.png",
+         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/_0.jpg",
       blurb:
         "As a young teen, Lee Sin was intent on becoming a summoner. His will and dedication were unmatched by any of his peers, and his skill drew the attention of Reginald Ashram, the League's High Councilor at the time. While studying at the Arcanum Majoris,...",
       info: {
