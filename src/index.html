@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-US">
   <head>
     <meta charset="utf-8">
     <title>LOL Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <header>
     <nav class="top-nav" id="topNav">
       <figure> <a href="index.html">
-          <img class="logo" src="img/logo-lol.png" href="index.html" alt="lol-logo"> </a>
+          <img class="logo" src="img/logo-lol.png" alt="lol-logo"> </a>
       </figure>
       <div class="nav-section" >
           <a class="nav-filter">CAMPEONES</a>
           <a class="nav-filter">ROLES</a>  
       </div>
     </nav>
+  </header>
+  <main>
     <section class="box">
       <select name="Ordenar" id="select-order">
        <option>Ordenar</option>
        <option value="asc">Ordenar de la A-Z</option>
        <option value="desc">Ordenar de la Z-A</option>
-    </select>
+      </select>
     </section>
     <section class="box">
-        <select name="Filtrar" id="select-roles"> 
-         <option>Filtrar por Roles</option>
-         <option value="Fighter"> Luchador</option>
-         <option value="Tank">Tank</option>
-         <option value="Mage">Mago</option>
-         <option value="Assassin">Asesino</option>
-         <option value="Support">Support</option>
-         <option value="Marksman">Marksman</option>
-        </select>
+      <select name="Filtrar" id="select-roles"> 
+        <option>Filtrar por Roles</option>
+        <option value="Fighter"> Luchador</option>
+        <option value="Tank">Tank</option>
+        <option value="Mage">Mago</option>
+        <option value="Assassin">Asesino</option>
+        <option value="Support">Support</option>
+        <option value="Marksman">Marksman</option>
+      </select>
     </section>
     <article id="max-stats">
     </article>
@@ -39,10 +42,9 @@
       <input type="text" id="text-search" placeholder=" Buscar" required/> 
       <button id="btn-search">Buscar</button>
     </section>
-    <main>
      <div id="container-list">
      </div>
-   </main>
+  </main>
      <script src="./data/lol/lol.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script>
