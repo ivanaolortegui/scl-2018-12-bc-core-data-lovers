@@ -37,7 +37,12 @@ function contentData(dataLol) {
     
   const functionToFilter = () => {
     let condition = selectRoles.value;
-    let filterDataRoles = window.lol.filterData(dataArray, condition);
+    let filterDataRoles;  
+    if (condition === '') {
+      filterDataRoles = dataArray;
+    } else {
+      filterDataRoles = window.lol.filterData(dataArray, 'tags', condition);
+    }
     listData(filterDataRoles);
     functionToStats(filterDataRoles);
   };
@@ -49,12 +54,14 @@ function contentData(dataLol) {
     let sortArray = window.lol.sortData(dataArray, sortOrden);
     listData(sortArray);
   };
-  selectOrder.addEventListener('change', functionToSort); 
+  selectOrder.addEventListener('change', functionToSort);
+    
 
   const functionToSearch = () => {
     let getInputValue = document.getElementById('text-search').value;
-    let searchName = window.lol.searchData(dataArray, getInputValue);
-    listData([searchName]);
+    let firstCharacterToUpperCase = getInputValue.substring(0, 1).toUpperCase() + getInputValue.substring(1).toLowerCase();
+    let searchName = window.lol.filterData(dataArray, 'name', firstCharacterToUpperCase);
+    listData(searchName);
   };
   btnSearch.addEventListener('click', functionToSearch);
 

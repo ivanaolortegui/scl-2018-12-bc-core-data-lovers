@@ -1,6 +1,5 @@
-const filterData = (data, condition) => {
-  const filterDataRoles = data.filter(element => (element.tags.indexOf(condition) !== -1));
-  return filterDataRoles;
+const filterData = (data, filterBy, condition) => {
+  return data.filter(element => (element[filterBy].indexOf(condition) !== -1));
 };
 
 const sortData = (data, sortOrder) => {

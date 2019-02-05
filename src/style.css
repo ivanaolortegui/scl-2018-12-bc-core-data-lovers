@@ -77,7 +77,7 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  font-size: 36px;
+  font-size: 178%;
   color:#C2A46D;
 }
 
@@ -86,9 +86,10 @@ body {
  font-style: normal;
  font-weight: normal;
  line-height: normal;
- font-size: 24px;
+ font-size: 85%;
  color: #E0DCD0;
 }
+ 
 .chart-pie {
  padding: 11% 34%;
 }

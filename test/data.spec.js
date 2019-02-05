@@ -74,7 +74,7 @@ describe('window.lol.filterData', () => {
     expect(typeof window.lol.filterData).toBe('function');
   });
   it('Debería retornar un array de objetos con los campeones que sean del rol asesino', () => {
-    expect(window.lol.filterData(inputFilterData, 'Assassin')).toEqual(outputFilterData);
+    expect(window.lol.filterData(inputFilterData, 'tags', 'Assassin')).toEqual(outputFilterData);
   });
 });
 
