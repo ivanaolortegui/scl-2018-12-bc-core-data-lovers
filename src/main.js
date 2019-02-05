@@ -4,6 +4,11 @@ const selectOrder = document.getElementById('select-order');
 const btnSearch = document.getElementById('btn-search');
 
 
+fetch('https://raw.githubusercontent.com/Laboratoria/scl-2018-12-bc-core-data-lovers/master/src/data/lol/lol.json')
+  .then(response => {
+    console.log(response.status);
+  });
+ 
 const dataLol = Object.values(LOL.data);
 const listData = (data) => {
   let templateListOfCards = '';
@@ -23,6 +28,7 @@ const listData = (data) => {
   });
   containerList.innerHTML = templateListOfCards;
 };
+
 listData(dataLol);
     
 const functionToFilter = () => {
@@ -55,5 +61,3 @@ const functionToStats = (data) => {
   maxStats.innerHTML = `<p class= "article-details"> Maximo daño en ataque es: ${maxStatsAttack} </p>`;
 };
 functionToStats(dataLol);
-
-
