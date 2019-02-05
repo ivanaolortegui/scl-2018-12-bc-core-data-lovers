@@ -18,14 +18,14 @@
     </nav>
   </header>
   <main>
-    <section class="box">
+    <div class="box">
       <select name="Ordenar" id="select-order">
        <option>Ordenar</option>
        <option value="asc">Ordenar de la A-Z</option>
        <option value="desc">Ordenar de la Z-A</option>
       </select>
-    </section>
-    <section class="box">
+    </div>
+    <div class="box">
       <select name="Filtrar" id="select-roles"> 
         <option>Filtrar por Roles</option>
         <option value="Fighter"> Luchador</option>
@@ -35,13 +35,13 @@
         <option value="Support">Support</option>
         <option value="Marksman">Marksman</option>
       </select>
-    </section>
+    </div>
     <div id="max-stats">
     </div>
-    <section>
+    <div>
       <input type="text" id="text-search" placeholder=" Buscar" required/> 
       <button id="btn-search">Buscar</button>
-    </section>
+    </div>
      <div id="container-list">
      </div>
   </main>
@@ -49,7 +49,7 @@
     <script src="./data/lol/lol.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="charts.js"></script>
   </body>
 </html>
