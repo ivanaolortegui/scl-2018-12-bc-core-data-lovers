@@ -64,13 +64,13 @@ const outputSearchData =
   { 'name': 'Akali', 'tags': ['Assassin'], 'stats': {'attackdamage': 58.376, 'attackdamageperlevel': 3.2}, 'title': 'the Fist of Shadow' };
 
 describe('lol', () => {
-  it('is an object', () => {
+  it('lol debería ser un object', () => {
     expect(typeof lol).toBe('object');
   });
 });
 
 describe('window.lol.filterData', () => {
-  it('is a function', () => {
+  it('filterData debería ser una función', () => {
     expect(typeof window.lol.filterData).toBe('function');
   });
   it('Debería retornar un array de objetos con los campeones que sean del rol asesino', () => {
@@ -79,7 +79,7 @@ describe('window.lol.filterData', () => {
 });
 
 describe('window.lol.sortData', () => {
-  it('SortData is a function', () => {
+  it('sortData debería ser una función', () => {
     expect(typeof window.lol.sortData).toBe('function');
   });
   it('debería retornar un nuevo array con los campeones de A-Z', () => {
@@ -97,7 +97,7 @@ describe('window.lol.sortData', () => {
 });
 
 describe('widow.lol.computeStats', () => {
-  it('computeStats is a function', () => {
+  it('computeStats debería ser una función', () => {
     expect(typeof window.lol.computeStats).toBe('function');
   });
   it('debería retornar un nuevo array con los ataques', () => {
@@ -106,8 +106,8 @@ describe('widow.lol.computeStats', () => {
 });
 
 
-describe('widow.lol.computeStats', () => {
-  it('searchData is a function', () => {
+describe('widow.lol.searchData', () => {
+  it('searchData debería ser una función', () => {
     expect(typeof window.lol.searchData).toBe('function');
   });
   it('debería retornar un nuevo array con el campeon buscado', () => {
