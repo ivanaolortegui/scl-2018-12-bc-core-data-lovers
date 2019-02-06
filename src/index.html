@@ -18,32 +18,36 @@
     </nav>
   </header>
   <main>
-    <div class="box">
-      <select name="Ordenar" id="select-order">
-       <option value="asc">Ordenar</option>
-       <option value="asc">Ordenar de la A-Z</option>
-       <option value="desc">Ordenar de la Z-A</option>
-      </select>
-    </div>
-    <div class="box">
-      <select name="Filtrar" id="select-roles"> 
-        <option value="">Filtrar por Roles</option>
-        <option value="Fighter"> Luchador</option>
-        <option value="Tank">Tank</option>
-        <option value="Mage">Mago</option>
-        <option value="Assassin">Asesino</option>
-        <option value="Support">Support</option>
-        <option value="Marksman">Marksman</option>
-      </select>
-    </div>
-    <div id="max-stats">
-    </div>
-    <div>
-      <input type="text" id="text-search" placeholder=" Buscar" required/> 
-      <button id="btn-search">Buscar</button>
-    </div>
-     <div id="container-list">
-     </div>
+    <section> 
+      <h1>League of Legends</h1>
+      <div class="container-select">
+        <select class="select-list" name="Ordenar" id="select-order">
+        <option value="asc">Ordenar</option>
+        <option value="asc">Ordenar de la A-Z</option>
+        <option value="desc">Ordenar de la Z-A</option>
+        </select>
+        <select class="select-list" name="Filtrar" id="select-roles"> 
+          <option value="">Filtrar por Roles</option>
+          <option value="Fighter"> Luchador</option>
+          <option value="Tank">Tank</option>
+          <option value="Mage">Mago</option>
+          <option value="Assassin">Asesino</option>
+          <option value="Support">Support</option>
+          <option value="Marksman">Marksman</option>
+        </select>
+      </div>
+    </section>
+     <section>
+      <div id="max-stats-damage-attack">
+      </div>
+      <div>
+        <input type="search" id="text-search" placeholder="Buscar un campeón" /> 
+      </div>
+     </section>
+     <section>
+      <div id="container-list">
+     </section> 
+      </div>
   </main>
     
     <script src="./data/lol/lol.js"></script> 

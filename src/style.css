@@ -5,7 +5,7 @@
 }
 
 body {  
-    background:url('img/fondo-lol.jpg') no-repeat center center fixed;;
+    background:url('img/fondo-lol.jpg'); 
     background-attachment: fixed;
     background-size: cover;
     margin: 0px;
@@ -47,25 +47,71 @@ body {
     border-right: 1px solid #AF8B40;
 }
 
- .box {
-    padding: 0.5% 45%;
+h1{
+font-family: Aclonica;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+margin: 1% 0%;
+text-align: center;
+font-size: 36px;
+color: #AF8B40;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(12px);
 }
+ .container-select{
+    margin: 1% 0%;
+ }
 
-.box select {
+
+.container-select select {
    background: rgba(18, 22, 25, 0.59);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    color: #007191;
-   padding: 10px;
+   padding: 11px;
+   margin: 0% 17%;
    border: none;
    font-size: 17px;
    -webkit-appearance: button;
-   outline: none
+   outline: none;
+   cursor:pointer;
+}
+
+input[type="search" i] {
+   width: 300px;
+   height: 35px;
+   background: rgba(29, 53, 70, 0.76);
+   border: 3px;
+   font-size: 10pt;
+   float: left;
+   color: #fff;
+   padding-left: 15px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 7px;
+}
+
+#max-stats-damage-attack{
+   height: 50px;
+   font-family: ABeeZee;
+   font-style: normal;
+   font-weight: normal;
+   line-height: normal;
+   font-size: 20px;
+   color: #AED4D6;
+   text-align: left;
+}
+
+#container-list {
+   margin: 4% 1% 4% 1%;
 }
 
 .blog-card {
-  border: 1px solid #C2A46D;
-  width: 40%;
-  text-align: center;
+   border: 1px solid #C2A46D;
+   width: 31%;
+   margin: 1%;
+   text-align: center;
+   display: inline-grid;
 }
 
 .post-image {
@@ -82,16 +128,16 @@ body {
 }
 
 .article-details{
- font-family: Abel;
- font-style: normal;
- font-weight: normal;
- line-height: normal;
- font-size: 85%;
- color: #E0DCD0;
+   font-family: Abel;
+   font-style: normal;
+   font-weight: normal;
+   line-height: normal;
+   font-size: 85%;
+   color: #E0DCD0;
 }
  
 .chart-pie {
- padding: 11% 34%;
+   padding: 11% 34%;
 }
 
 

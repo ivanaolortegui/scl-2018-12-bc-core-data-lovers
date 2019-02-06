@@ -1,7 +1,7 @@
 const containerList = document.getElementById('container-list');
 const selectRoles = document.getElementById('select-roles');
 const selectOrder = document.getElementById('select-order');
-const btnSearch = document.getElementById('btn-search');
+const textSearch = document.getElementById('text-search');
 
 fetch('https://raw.githubusercontent.com/ivanaolortegui/scl-2018-12-bc-core-data-lovers/master/src/data/lol/lol.json')
   .then(response => {  
@@ -21,11 +21,10 @@ function contentData(dataLol) {
       const card = `
         <article class="blog-card">
         <img class="post-image" src="${champions.splash}"/>
-        <p class="tittle-name" > ${champions.name}  </p>
+        <h2 class="tittle-name" > ${champions.name}  </h2>
         <div class="article-details">
-        <p> ${champions.tags}</p> 
-        <p> ${champions.stats.attackdamage}</p>
-        <p> ${champions.stats.hpregenperlevel}</p>
+        <p> Rol: ${champions.tags} </p> 
+        <p> Daño en Ataque: ${champions.stats.attackdamage}</p>
         </div>
         </article>
         `;
@@ -56,20 +55,20 @@ function contentData(dataLol) {
   };
   selectOrder.addEventListener('change', functionToSort);
     
-
+  
   const functionToSearch = () => {
-    let getInputValue = document.getElementById('text-search').value;
+    let getInputValue = textSearch.value;
     let firstCharacterToUpperCase = getInputValue.substring(0, 1).toUpperCase() + getInputValue.substring(1).toLowerCase();
     let searchName = window.lol.filterData(dataArray, 'name', firstCharacterToUpperCase);
     listData(searchName);
   };
-  btnSearch.addEventListener('click', functionToSearch);
+  textSearch.addEventListener('search', functionToSearch);
 
 
   const functionToStats = (data) => {
-    const maxStats = document.getElementById('max-stats');
+    const maxStatsDamageAttack = document.getElementById('max-stats-damage-attack');
     let maxStatsAttack = window.lol.computeStats(data);
-    maxStats.innerHTML = `<p class= "article-details"> Maximo daño en ataque es: ${maxStatsAttack} </p>`;
+    maxStatsDamageAttack.innerHTML = `<h2> Maximo daño en ataque es: ${maxStatsAttack} </h2>`;
   };
   functionToStats(dataArray);
 }
