@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>LOL Lovers</title>
+    <link rel="icon" type="image/png" href="img/icon-lol.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,8 +20,9 @@
     </nav>
   </header>
   <main>
-    <section> 
-      <h1>League of Legends</h1>
+      <figure>
+          <img class="logo-letters" src="img/logo-lol-letters.png" alt="lol-logo">
+      </figure>
       <div class="container-select">
         <select class="select-list" name="Ordenar" id="select-order">
         <option value="asc">Ordenar</option>
@@ -35,19 +38,12 @@
           <option value="Support">Support</option>
           <option value="Marksman">Marksman</option>
         </select>
-      </div>
-    </section>
-     <section>
-      <div id="max-stats-damage-attack">
-      </div>
+      </div>  
+      <div id="max-stats-damage-attack"> </div>
       <div>
         <input type="search" id="text-search" placeholder="Buscar un campeón" /> 
       </div>
-     </section>
-     <section>
-      <div id="container-list">
-     </section> 
-      </div>
+      <div id="container-list"></div>      
   </main>
     
     <script src="./data/lol/lol.js"></script> 
