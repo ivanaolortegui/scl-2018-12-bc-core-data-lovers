@@ -20,12 +20,12 @@ function contentData(dataLol) {
     data.forEach((champions) => { 
       const card = `
         <article class="blog-card">
-        <img class="post-image" src="${champions.splash}"/>
-        <h2 class="tittle-name" > ${champions.name}  </h2>
-        <div class="article-details">
-        <p> Rol: ${champions.tags} </p> 
-        <p> Daño en Ataque: ${champions.stats.attackdamage}</p>
-        </div>
+          <img class="post-image" src="${champions.splash}"/>
+          <h2 class="tittle-name" > ${champions.name}  </h2>
+          <div class="article-details">
+            <p> Rol: ${champions.tags} </p> 
+            <p> Daño en Ataque: ${champions.stats.attackdamage}</p>
+          </div>
         </article>
         `;
       templateListOfCards += card;
@@ -36,7 +36,7 @@ function contentData(dataLol) {
     
   const functionToFilter = () => {
     let condition = selectRoles.value;
-    let filterDataRoles;  
+    let filterDataRoles = [];  
     if (condition === '') {
       filterDataRoles = dataArray;
     } else {
