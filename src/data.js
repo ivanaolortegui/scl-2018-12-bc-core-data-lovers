@@ -30,7 +30,7 @@ const computeStats = (data) => {
 };
 
 const searchData = (data, input) => {
-  const searchName = data.find(element => element.name === input);
+  const searchName = data.find(element => (element.name.indexOf(input) !== -1));
   return searchName;
 };
 

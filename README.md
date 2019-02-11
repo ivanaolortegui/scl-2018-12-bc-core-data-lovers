@@ -48,7 +48,6 @@ League of Legends es uno de los juegos online competitivos más divertidos, ya q
 
 **Definición de Terminado** el usuario al ingresar a la aplicación puede ver un párrafo que contenga el máximo daño de ataque de todos los campeones y si filtra por rol mostrará el máximo daño de ataque según su rol.
 
-
 ### Historia 5:
 
 **Yo como**: usuario de la página web.     

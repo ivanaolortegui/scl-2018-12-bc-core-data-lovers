@@ -2,7 +2,6 @@ const containerList = document.getElementById('container-list');
 const selectRoles = document.getElementById('select-roles');
 const selectOrder = document.getElementById('select-order');
 const textSearch = document.getElementById('text-search');
-
 fetch('https://raw.githubusercontent.com/ivanaolortegui/scl-2018-12-bc-core-data-lovers/master/src/data/lol/lol.json')
   .then(response => {  
     return response.json();
@@ -68,7 +67,7 @@ function contentData(dataLol) {
   const functionToStats = (data) => {
     const maxStatsDamageAttack = document.getElementById('max-stats-damage-attack');
     let maxStatsAttack = window.lol.computeStats(data);
-    maxStatsDamageAttack.innerHTML = `<h2> Maximo daño en ataque es: ${maxStatsAttack} </h2>`;
+    maxStatsDamageAttack.innerHTML = `<h2> Estadísticas Máximo daño de Ataque: ${maxStatsAttack} </h2>`;
   };
   functionToStats(dataArray);
 }
